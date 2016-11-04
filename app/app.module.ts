@@ -5,6 +5,7 @@ import { FormsModule }    from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './home.component';
+import { ArrivalComponent} from './arrival.component';
 
 
 @NgModule({
@@ -13,12 +14,16 @@ import { HomeComponent } from './home.component';
       RouterModule.forRoot([
         {
           path: 'home',
-          component: HomeComponent
+          component: HomeComponent,
         },
         {
             path: '',
             redirectTo: '/home',
             pathMatch: 'full'
+        },
+        {
+            path: 'arrival',
+            component: ArrivalComponent,
         },
 
       ])
@@ -26,6 +31,7 @@ import { HomeComponent } from './home.component';
   declarations: [
       AppComponent,
       HomeComponent,
+      ArrivalComponent,
   ],
   bootstrap: [ AppComponent ]
   })
