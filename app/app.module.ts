@@ -33,7 +33,8 @@ import { ArrivalComponent} from './arrival.component';
       HomeComponent,
       ArrivalComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [
+    AppComponent ]
   })
 
 export class AppModule { }

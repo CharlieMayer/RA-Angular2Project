@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 
 })
 export class ArrivalComponent {
-  constructor(){
-}
+  occupation  = ['Dust Farmer', 'Alien hunter', 'Battery Technician',
+'Yoga teacher', 'Front-end developer'];
+
+submitted= false;
+
+onSubmit(){ this.submitted=true;}
+
 }
