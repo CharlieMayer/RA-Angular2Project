@@ -4,15 +4,12 @@
         <fieldset>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name"
-         required
-         [(ngModel)]="model.name" name="name">
+                <input type="text" class="form-control" id="name" required>
             </div>
             <br>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input type="text"  class="form-control" id="alterEgo"
-         [(ngModel)]="model.alterEgo" name="alterEgo">
+                <input type="text" class="form-control" id="age">
             </div>
 
             <div class="form-group">
@@ -37,7 +34,7 @@
             </div>
         </fieldset>
         <fieldset>
-             <button >Check In</button>
+             <button type="submit" class="btn btn-default">Check In</button>
         </fieldset>
     </form>
 </div>
