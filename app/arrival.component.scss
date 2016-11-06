@@ -8,6 +8,8 @@ h1 {
 	display: flex;
     align-items: center;
     justify-content: center;
+    color: red;
+    font-size: 24px;
 }
 
 form {
@@ -17,10 +19,14 @@ form {
     justify-content: space-between;
 }
 
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+div {
+  background: black;
 }
-
-.ng-invalid:not(form)  {
-  border-left: 5px solid #a94442; /* red */
+select {
+    background: black;
+    color: white;
+}
+input{
+  background: black;
+  color: white;
 }
