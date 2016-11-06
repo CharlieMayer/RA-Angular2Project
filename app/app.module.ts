@@ -6,6 +6,7 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './home.component';
 import { ArrivalComponent} from './arrival.component';
+import { ColonistFormComponent } from './colonist-form.component';
 
 
 @NgModule({

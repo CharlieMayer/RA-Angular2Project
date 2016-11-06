@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Colonist }    from './hero';
+import { Colonist }    from './colonist';
 @Component({
   moduleId: module.id,
   selector: 'colonist-form',
