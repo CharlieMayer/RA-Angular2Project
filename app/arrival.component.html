@@ -1,23 +1,44 @@
 <div>
     <h1>Register</h1>
-    <form>
         <fieldset>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" id="name"  required
+                 [(ngModel)]="model.name" name="name"
+                  #name="ngModel" >
+                 <div [hidden]="name.valid || name.pristine"
+                 class="alert alert-danger">
+                  Name is required
+        </div>
             </div>
             <br>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input type="text" class="form-control" id="age">
+                <input type="text" class="form-control" id="age" required
+                 [(ngModel)]="model.age" name="age"
+                  #age="ngModel" >
+                 <div [hidden]="age.valid || age.pristine"
+                class="alert alert-danger">
+                  Age is required
+        </div>
             </div>
 
             <div class="form-group">
               <label for="power">Select Occupation</label>
-              <select class="form-control" id="occupation" required>
+              <select class="form-control" id="occupation"
+              required
+              [(ngModel)]="model.occupations" name="occupation"
+              #occupation="ngModel" >
                   <option *ngFor= "let o of occupations" [value]="o">{{o}}</option>
               </select>
+              <div [hidden]="occupation.valid || occupation.pristine" class="alert alert-danger">
+                Occupation is required
+              </div>
           </div>
+
+
+
+
 
 
 
@@ -34,7 +55,8 @@
             </div>
         </fieldset>
         <fieldset>
-             <button type="submit" class="btn btn-default">Check In</button>
+             <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Check In</button>
+             <a routerLink="/report" routerLinkActive="active"></a>
         </fieldset>
-    </form>
+
 </div>
