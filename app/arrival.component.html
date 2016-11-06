@@ -4,12 +4,15 @@
         <fieldset>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" id="name"
+         required
+         [(ngModel)]="model.name" name="name">
             </div>
             <br>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input type="text" class="form-control" id="age">
+                <input type="text"  class="form-control" id="alterEgo"
+         [(ngModel)]="model.alterEgo" name="alterEgo">
             </div>
 
             <div class="form-group">

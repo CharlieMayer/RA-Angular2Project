@@ -11,11 +11,13 @@ import { ArrivalComponent} from './arrival.component';
 @NgModule({
   imports: [
       BrowserModule,
+      FormsModule,
       RouterModule.forRoot([
         {
           path: 'home',
           component: HomeComponent,
         },
+
         {
             path: '',
             redirectTo: '/home',
