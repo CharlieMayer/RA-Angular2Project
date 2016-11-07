@@ -20,3 +20,4 @@ newColonist() {
   this.active = false;
   setTimeout(() => this.active = true, 0);
 }
+}

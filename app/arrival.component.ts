@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'arrival',
   templateUrl: './app/arrival.component.html',
