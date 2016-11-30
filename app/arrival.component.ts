@@ -1,22 +1,36 @@
+import { Component, OnInit  } from '@angular/core';
 
-import { Component } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { Router } from '@angular/router';
-import { AllJobs } from './model/AllJobs';
-
+import { Job }    from './model/Job';
+import { Jobs }    from './model/Jobs';
+import { JobService }    from './JobService';
+import { Colonist } from './model/colonist';
+import { ColonistService } from './ColonistService';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
+  moduleId: module.id,
   selector: 'arrival',
-  templateUrl: './app/arrival.component.html',
-  styleUrls: ['./app/arrival.component.scss']
-
+  templateUrl: 'arrival.component.html',
+  providers: [JobService, ColonistService],
 })
-export class ArrivalComponent {
-  occupation  = ['Dust Farmer', 'Alien hunter', 'Battery Technician',
-'Yoga teacher', 'Front-end developer'];
+export class ArrivalComponent implements OnInit{
+  allJobs: Job[];
+  colonist: Colonist;
+  job: Job;
 
-submitted= false;
+constructor(private jobService: JobService){
+console.log("I just arrived Yayyy");
 
-onSubmit(){ this.submitted=true;}
+  jobService.getJobs().then(this.afterigetjobs)
 
+}
+
+afterigetjobs(response):any{
+  console.log("after i get jobs");
+}
+
+ngOnInit():void {
+
+this.jobService.getJobs().then((j)=> {this.allJobs=j.jobs ; console.log(this.allJobs)} );
+}
 }

@@ -6,10 +6,9 @@ import { HttpModule, JsonpModule }    from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { HomeComponent } from './home.component';
-import { ArrivalComponent} from './arrival.component';
-import {ColonistFormComponent } from './colonist-form.component';
-import { ReportComponent } from './report.component';
+import { ArrivalComponent } from './arrival.component';
 import { EncountersComponent } from './encounters.component';
+import { ReportComponent } from './report.component';
 
 
 @NgModule({
@@ -48,9 +47,8 @@ import { EncountersComponent } from './encounters.component';
       AppComponent,
       HomeComponent,
       ArrivalComponent,
-      ColonistFormComponent,
-      ReportComponent,
       EncountersComponent,
+      ReportComponent,
   ],
   bootstrap: [
     AppComponent ]
